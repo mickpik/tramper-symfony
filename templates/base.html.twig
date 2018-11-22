@@ -1,0 +1,911 @@
+{% set feestdagen = true %}
+
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="Description" content="Vishandel Sjaak Tramper | Uw visspecialist | Dan weet je dat het goed is">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{% block title %}Sjaak Tramper{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('css/app') }}
+    {% endblock %}
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+</head>
+
+<body id="page-top">
+{% block header %}
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Vishandel Tramper</a>
+            <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Over</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#standplaatsen">Standplaatsen</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#catering">Catering</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
+                    {% if feestdagen %}
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#feestdagen">Feestdagen</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead text-secondary text-center">
+        <div class="container">
+            <div class="header-container">
+                <img class="img-fluid mb-5 d-block mx-auto" src="{{ asset('img/logo.jpg') }}" alt="logo">
+                <hr class="star-dark">
+                <h2 class="font-weight-light mb-0">Sinds 1993 </h2>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
+<div class="container body-container">
+    {% block body %}
+        <!-- About Section -->
+        <section class="text-secondary mb-0" id="about">
+            <div class="container">
+                <h2 class="text-center text-uppercase text-secondary">Over</h2>
+                <hr class="star-dark mb-5">
+                <div class="row">
+                    <div class="col-lg-4 ml-auto">
+                        <p class="lead">
+                            De ambulante vishandel van Sjaak Tramper staat al sinds 1993 voor kwaliteit en service. Bestellingen kunnen via deze website worden geplaatst, maar dit kan ook telefonisch of via de email.
+                            U kunt uw bestellingen afhalen aan één van onze standplaatsen of in onze werkplaats.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 mr-auto">
+                        <p class="lead">
+                            Tramper Catering is voortgevloeid uit de activiteiten van onze vishandel. Wij verzorgden vanuit de vishandel uiteraard visschotels en zijn op verzoek van onze klanten alweer jaren geleden ook vleesschotels en buffetten gaan verzorgen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Standplaatsen Section -->
+        <section class="bg-primary text-white mb-0 rounded" id="standplaatsen">
+            <div class="container">
+                <h2 class="text-center text-uppercase text-white">Standplaatsen</h2>
+                <hr class="star-light mb-5">
+                <div class="row">
+                    <div class="col-lg-12 text-white">
+                        <table class="table table-sm">
+                            <tbody>
+                            <tr>
+                                <td><b>Dinsdag</b></td>
+                                <td><b>08.00 – 17.00 uur</b></td>
+                                <td><b>Goes, Agrimarkt</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>&nbsp;</b></td>
+                                <td><b>08.00 – 12.30 uur</b></td>
+                                <td><b>Krabbendijke, centrum</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>&nbsp;</b></td>
+                                <td><b>13.00 – 17.30 uur</b></td>
+                                <td><b>Kruiningen, weekmarkt</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>&nbsp;</b></td>
+                                <td><b>&nbsp;</b></td>
+                                <td><b>&nbsp;</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>Woensdag</b></td>
+                                <td><b>08.00 – 14.00 uur</b></td>
+                                <td><b>Goes, Molenplein</b></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><b>08.00 – 12.30 uur</b></td>
+                                <td><b>Wemeldinge, centrum</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>&nbsp;</b></td>
+                                <td><b>15.00 – 17.30 uur</b></td>
+                                <td><b>Kapelle, parkeerplaats De Vroone</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>&nbsp;</b></td>
+                                <td><b>14.30 – 17.30 uur<br>
+                                    </b></td>
+                                <td><b>‘s Heer Arendskerke, parkeerterrein, Raadhuisstraat<br>
+                                    </b></td>
+                            </tr>
+                            <tr>
+                                <td><b>&nbsp;</b></td>
+                                <td><b>&nbsp;</b></td>
+                                <td><b>&nbsp;</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>Donderdag</b></td>
+                                <td><b>08.00 – 17.00 uur</b></td>
+                                <td><b>Goes, Agrimarkt</b></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><b>08.00 – 12.30 uur</b></td>
+                                <td><b>Heinkenszand, centrum</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>&nbsp;</b></td>
+                                <td><b>15.00 – 17.30 uur</b></td>
+                                <td><b>Rilland, centrum</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>&nbsp;</b></td>
+                                <td><b>&nbsp;</b></td>
+                                <td><b>&nbsp;</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>Vrijdag</b></td>
+                                <td><b>08.00 – 17.00 uur</b></td>
+                                <td><b>Goes, Agrimarkt</b></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><b>08.00 – 12.30 uur</b></td>
+                                <td><b>Yerseke, weekmarkt centrum</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>&nbsp;</b></td>
+                                <td><b>13.00 – 15.00 uur</b></td>
+                                <td><b>Kruiningen, centrum</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>&nbsp;</b></td>
+                                <td><b>15.30 – 17.30 uur</b></td>
+                                <td><b>Hansweert, parkeerplaats Kaj Munk</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>&nbsp;</b></td>
+                                <td><b>&nbsp;</b></td>
+                                <td><b>&nbsp;</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>Zaterdag</b></td>
+                                <td><b>08.00 – 17.00 uur</b></td>
+                                <td><b>Goes, Agrimarkt</b></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><b>09.00 – 12.30 uur</b></td>
+                                <td><b>Heinkenszand, centrum</b></td>
+                            </tr>
+                            <tr>
+                                <td><b>&nbsp;</b></td>
+                                <td><b>14.00 – 17.00 uur*</b></td>
+                                <td><b>Wemeldinge, Sluisplateau (*alleen weekend voor de Pasen&nbsp; t/m half september )</b></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catering Section -->
+        <section class="text-secondary mb-0" id="catering">
+            <div class="container">
+                <h2 class="text-center text-uppercase text-secondary">Catering</h2>
+                <hr class="star-dark mb-5">
+                <div class="row">
+                    <p class="lead">
+                        Tramper Catering is voortgevloeid uit de activiteiten van onze vishandel. Wij verzorgden vanuit de vishandel uiteraard visschotels en zijn op verzoek van onze klanten alweer jaren geleden ook vleesschotels en buffetten gaan verzorgen.
+                    </p>
+                    <p class="lead">
+                        In onze werkplaats aan de Smokkelhoekweg te Kapelle hebben wij een professionele keuken, waar niet alleen de verse producten voor onze vishandel worden bereid, maar ook de mogelijkheden voor onze activiteiten in de catering verder zijn uitgebreid. Wij vervaardigen in onze keuken de meest heerlijke buffetten en gerechten.De combinaties die wij u aangeven via deze pagina’s zijn slechts suggesties. Ze zijn bedoeld om u een idee te geven van de mogelijkheden. Wij kunnen u nog vele andere variaties en combinaties aanbieden! Uiteraard worden al onze koude schotels en buffetten fraai opgemaakt op schalen. Onze warme gerechten worden gepresenteerd au bain marie.
+                    </p>
+                    <p class="lead">
+                        Nieuw in ons aanbod zijn onze partypannen. Op deze pannen kunt u bv vis, vlees, paëlla of aardappeltjes bereiden. Weer eens wat anders tijdens uw feest.
+                    </p>
+                    <p class="lead">
+                        KORTOM, Tramper Catering is echt van alle markten thuis. Onze catering is maatwerk. Graag bespreken wij geheel vrijblijvend met u uw persoonlijke wensen om te komen tot een passend cateringvoorstel.
+                    </p>
+                    <img src="{{ asset('img/partypan.jpg') }}" height="500px" class="mx-auto d-block">
+                </div>
+
+                <h3 class="text-center text-uppercase text-secondary mt-5 mb-5">Ons Assortiment</h3>
+                <div id="accordion">
+                    {% from _self import assortiment %}
+                    {% set bodyBbq1 = '
+                        <p>5 stuks vlees/vis per persoon</p>
+                        <p>Keuze uit 5 van onderstaande vis- en vleessoorten ;<br>
+                            Vlees<br>
+                            • Portie kip sate 2 st<br>
+                            • Barbecue worst<br>
+                            • Hamburger<br>
+                            • Gemarineerd speklapje<br>
+                            Vis<br>
+                            • Garnalenspies<br>
+                            • Zalmspies<br>
+                            • Vis-shaslick</p>
+                        <p>Keuze uit 3 van onderstaande salades<br>
+                            • Kartoffelsalade<br>
+                            • Pastasalade met tonijn of zalm<br>
+                            • Gemengde griekse salade<br>
+                            • Waldorfsalade<br>
+                            • Gemengde groene salade<br>
+                            • Komkommersalade<br>
+                            • Gemengde selderijsalade met ananas</p>
+                        <p>Stokbrood met kruidenboter<br>
+                            Div sausjes en warme satesaus</p>
+                        <p>Bovenstaande BBQ buffet kunnen we aanbieden voor 12,75 euro pp incl BTW bij minimum van 25 personen .<br>
+                            Huur barbecue en gebruik van gas is inbegrepen<br>
+                            Wij verzoeken u de barbecue schoon terug te brengen</p>
+                    ' %}
+                    {{ assortiment('bbqone', 'Barbecue pakket 1', bodyBbq1) }}
+
+                    {% set bodyBbq2 = '
+                        <p>5 stuks vlees/vis per persoon</p>
+                        <p>Keuze uit 5 van onderstaande vis- en vleessoorten ;<br>
+                            Vlees<br>
+                            • Portie kip sate 2st<br>
+                            • Sparerib<br>
+                            • Hamburger<br>
+                            • Gegaarde drumstick<br>
+                            Vis<br>
+                            • Vis-shaslick<br>
+                            • Zalmspies<br>
+                            • Garnalenspies<br>
+                            • Kabeljauw omwikkeld met spek<br>
+                            • Gemarineerde gamba’s<br>
+                            • Tonijn/scampispies</p>
+                        <p>Keuze uit 4 van onderstaande salades<br>
+                            • Kartoffelsalade met uitgebakken spekjes<br>
+                            • Zalmsalade<br>
+                            • Pastasalade met tonijn of zalm<br>
+                            • Gemengde griekse salade<br>
+                            • Waldorfsalade<br>
+                            • Gemengde groene salade<br>
+                            • Komkommersalade<br>
+                            • Gemengde selderijsalade met ananas</p>
+                        <p>Stokbrood met kruidenboter<br>
+                            Div sausjes en warme satesaus</p>
+                        <p>Bovenstaande BBQ buffet kunnen we aanbieden voor 15,75 euro pp incl BTW bij minimum van 25 personen .<br>
+                            Huur barbecue en gebruik van gas is inbegrepen<br>
+                            Wij verzoeken u de barbecue schoon terug te brengen</p>
+                    ' %}
+                    {{ assortiment('bbqtwo', 'Barbecue pakket 2', bodyBbq2) }}
+
+                    {% set bodyBbq3 = '
+                        <p>5 stuks vlees/vis per persoon</p>
+                        <p>Keuze uit 5 van onderstaande vis- en vleessoorten;<br>
+                            Vlees<br>
+                            • Portie varkenshaas sate 2 st<br>
+                            • Hamburger<br>
+                            • Biefstukspies<br>
+                            • Gemarineerd speklapje<br>
+                            • Sparerib<br>
+                            Vis<br>
+                            • Vis-shaslick<br>
+                            • Zalmmootje<br>
+                            • Gambaspies<br>
+                            • Vispakketje<br>
+                            • Kabeljauw omwikkeld met spek<br>
+                            • Tonijn /scampispies</p>
+                        <p>Keuze uit 5 van onderstaande salades<br>
+                            • Vleessalade<br>
+                            • Zalmsalade<br>
+                            • Pasta salade met tonijn of zalm<br>
+                            • Gemengde griekse salade<br>
+                            • Waldorfsalade<br>
+                            • Gemengde groene salade<br>
+                            • Komkommersalade<br>
+                            • Gemengde selderijsalade met ananas<br>
+                            • Verse fruitsalade</p>
+                        <p>Stokbrood met kruidenboter<br>
+                            Diverse sausjes en warme satesaus</p>
+                        <p>Bovenstaande BBQ buffet kunnen we aanbieden voor 17,75 euro pp incl BTW bij minimum van 25 personen .<br>
+                            Huur barbecue en gebruik van gas is inbegrepen<br>
+                            Wij verzoeken u de barbecue schoon terug te brengen</p>
+                    ' %}
+                    {{ assortiment('bbqthree', 'Barbecue pakket 3', bodyBbq3) }}
+
+                    {% set ijstaart = '
+                        <p>IJstaart in een smaak naar keuze, opgebouwd in lagen, bijvoorbeeld:</p>
+                        <p>cake – aardbeienmousse – cake – vanilleijs – aardbeien</p>
+                        <p>Het is mogelijk een persoonlijke boodschap, een foto of een logo op de ijstaart te presenteren…</p>
+                        <h4>minimaal 25 personen / € 3,50 per persoon</h4>
+                        <p>smaak in overleg</p>
+                    ' %}
+                    {{ assortiment('ijstaart', 'IJstaart', ijstaart) }}
+
+                    {% set kwc1 = '
+                        <div class="row">
+                            <div class="col-lg-7">
+                            <h4>minimaal 25 personen /&nbsp;€ 25,00 per persoon</h4>
+                            <ul>
+                                <li>Visschotel met zalmsalade uit eigen keuken, gerookte paling, gerookte zalmfilet, gamba’s, hollandse garnalen, gerookte makreelfilet en forelfilet, gevulde tomaten met krabsalade</li>
+                                <li>Vleesschotel met vleessalade uit eigen keuken, ardennenham, rauwe ham met meloen, rosbief, fricandeau, cervelaat rolletjes gevuld met roomkaas, gehaktballetjes en gevulde eieren</li>
+                                <li>Versgebakken stokbrood met huisgemaakte kruidenboter</li>
+                                <li>Remoulade- en cocktailsaus</li>
+                                <li>Kipsaté met pindasaus</li>
+                                <li>Vismatelot = zalm, kabeljauw en garnalen in Hollandaise saus</li>
+                                <li>Gegratineerde aardappelen</li>
+                                <li>Huisgemaakte bami</li>
+                            </ul>
+                            </div>
+                            <div class="col-lg-5">
+                                <img src="' ~ asset('img/catering-schotels.jpg') ~ '" class="mx-auto d-block">
+                            </div>
+                        </div>
+                    ' %}
+                    {{ assortiment('kwc1', 'Koud en warm buffet combinatie 1', kwc1) }}
+
+                    {% set kwc2 = '
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <p>minimaal 25 personen / € 27,50 per persoon</p>
+                                <ul>
+                                    <li>Visschotel met zalmsalade uit eigen keuken, gerookte zalmfilet, Hollandse garnalen en gevulde tomaten met krabsalade</li>
+                                    <li>Vleesschotel met vleessalade uit eigen keuken, rosbief, cervelaatrolletjes met roomkaas en gevulde eieren</li>
+                                    <li>Haringschotel</li>
+                                    <li>Carpachioschotel</li>
+                                    <li>Vitello Tonato ( kalfsvlees met mayonaisse van tonijn)</li>
+                                    <li>Versgebakken stokbrood met huisgemaakte kruidenboter</li>
+                                    <li>Remoulade- en cocktailsaus</li>
+                                    <li>Kipsaté met pindasaus</li>
+                                    <li>Vismatelot = zalm, kabeljauw en garnalen in Hollandaise saus</li>
+                                    <li>Scampi in kreeftensaus</li>
+                                    <li>Gegratineerde aardappelen</li>
+                                    <li>Huisgemaakte bami</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-5">
+                                <img src="' ~ asset('img/catering-detail.jpg') ~ '" class="mx-auto d-block">
+                            </div>
+                        </div>
+                    ' %}
+                    {{ assortiment('kwc2', 'Koud en warm buffet combinatie 2', kwc2) }}
+
+                    {% set kwc3 = '
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <p>Een uitgebreider buffet, maar het blijven slechts suggesties. Heeft u andere wensen? Wij bieden u graag een aangepaste versie…</p>
+                                <h4>minimaal 25 personen /&nbsp;€ 33,50 per persoon</h4>
+                                <ul>
+                                    <li>Ardennerham met meloen</li>
+                                    <li>Vleesschotel met huzarensalade uit eigen keuken , rosbief, rollade , cervelaatrolletjes met roomkaas en gevulde eieren</li>
+                                    <li>Visschotel met zalmsalade uit eigen keuken, gerookte palingfilet, gerookte zalmfilet en gerookte forelfilet</li>
+                                    <li>Hollandse garnalencocktail</li>
+                                    <li>Carpachioschotel</li>
+                                    <li>Vitello Tonato ( kalfsvlees met mayonaisse van tonijn)</li>
+                                    <li>Versgebakken stokbrood met huisgemaakte kruidenboter</li>
+                                    <li>Remoulade- en cocktailsaus</li>
+                                    <li>Ossenhaaspuntjes in champignonsaus</li>
+                                    <li>Kipsaté met pindasaus</li>
+                                    <li>Scampis in kreeftensaus</li>
+                                    <li>Vismatelot = zalm, kabeljauw en garnalen in Hollandaise saus</li>
+                                    <li>Gegratineerde aardappelen</li>
+                                    <li>Huisgemaakte bami</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-5">
+                                <img src="' ~ asset('img/hapjes-2.jpg') ~ '" class="mx-auto d-block">
+                            </div>
+                        </div>
+                    ' %}
+                    {{ assortiment('kwc3', 'Koud en warm buffet combinatie 3', kwc3) }}
+
+                    {% set koud = '
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <p>Vanwege de vele variaties is dit koud buffet te bestellen vanaf 25 personen. Ideaal&nbsp;om een&nbsp;bijzondere gelegenheid thuis te vieren…</p>
+                                <h4>Minimaal 25 personen /&nbsp;€ 22,50 per persoon</h4>
+                                <ul>
+                                    <li>Zalmsalade uit eigen keuken</li>
+                                    <li>Huzarensalade uit eigen keuken</li>
+                                    <li>Ardennerham met meloen</li>
+                                    <li>Vleesschotel met diverse vleeswarensoorten</li>
+                                    <li>Visschotel gerookte zalmfilet, gerookte palingfilet, Hollandse garnalen, gerookte forelfilet, gerookte makreelfilet en gamba’s</li>
+                                    <li>Hapjesschotel gevulde tomaten met krabsalade, gevulde eieren, cervelaatrolletjes met roomkaas, gehaktballetjes en wrapstukjes</li>
+                                    <li>Haringschotel</li>
+                                    <li>Carpachioschotel</li>
+                                    <li>Huisgemaakte kruidenboter</li>
+                                    <li>Versgebakken stokbrood</li>
+                                    <li>Remoulade- en cocktailsaus</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-5">
+                                <img src="' ~ asset('img/catering-schotels.jpg') ~ '" class="mx-auto d-block">
+                            </div>
+                        </div>
+                    ' %}
+                    {{ assortiment('koud', 'Koud buffet', koud) }}
+
+                    {% set schotelVis = '
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <p>Te bestellen vanaf 1 persoon en een ware maaltijdschotel…</p>
+                                <h4>€ 14,95 per persoon</h4>
+                                <ul>
+                                    <li>Zalmsalade uit eigen keuken</li>
+                                    <li>Gerookte makreelfilet</li>
+                                    <li>Gerookte zalmfilet</li>
+                                    <li>Gerookte palingfilet</li>
+                                    <li>Gerookte forelfilet</li>
+                                    <li>Hollandse garnalen</li>
+                                    <li>Gamba’s</li>
+                                    <li>Rivierkreeftvlees</li>
+                                    <li>Scampi’s</li>
+                                    <li>Gevulde tomaat met krabsalade</li>
+                                </ul>
+                                <p><strong>prijs per schotel voor 4 personen € 58,00</strong></p>
+                            </div>
+                            <div class="col-lg-5">
+                                <img src="' ~ asset('img/schotels.jpg') ~ '" class="mx-auto d-block">
+                            </div>
+                        </div>
+                    ' %}
+                    {{ assortiment('schotelVis', 'Visschotel de luxe', schotelVis) }}
+
+                    {% set schotelVlees = '
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <p>Al te bestellen vanaf 1 persoon! Een ware maaltijdschotel met salade en diverse vleessoorten..</p>
+                                <h4>€ 14,95 per persoon</h4>
+                                <ul>
+                                    <li>Vleessalade uit eigen keuken</li>
+                                    <li>Ardennerham met meloen</li>
+                                    <li>Achterham</li>
+                                    <li>Rosbief</li>
+                                    <li>Fricandeau</li>
+                                    <li>Kipspiesjes</li>
+                                    <li>Spia Nata Romana</li>
+                                    <li>Pain d ‘Ardenne</li>
+                                    <li>Cervelaatrolletje met kruidenkaas</li>
+                                    <li>Gehaltballetjes</li>
+                                    <li>Gevulde eieren</li>
+                                </ul>
+                                <p><strong>&nbsp;prijs per schotel voor 4 personen € 58,00</strong></p>
+                            </div>
+                            <div class="col-lg-5">
+                                <img src="' ~ asset('img/schotels.jpg') ~ '" class="mx-auto d-block">
+                            </div>
+                        </div>
+                    ' %}
+                    {{ assortiment('schotelVlees', 'Vleesschotel de luxe', schotelVlees) }}
+
+                    {% set luxeHap = '
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <h4>Minimaal 10 stuks per soort /&nbsp;€ 1,25 per stuk:</h4>
+                                <ul>
+                                    <li>stokbroodje krabsalade</li>
+                                    <li>stokbroodje haring</li>
+                                    <li>stokbroodje paté</li>
+                                    <li>stokbroodje brie</li>
+                                    <li>stokbroodje gerookte zalmfilet</li>
+                                    <li>stokbroodje makreelfilet</li>
+                                    <li>gevuld ei</li>
+                                    <li>gevulde tomaat met krabsalade</li>
+                                    <li>stokbroodje Hollandse garnalen</li>
+                                    <li>stokbroodje gerookte zalmfilet met roomkaas</li>
+                                    <li>stokbroodje gerookte forelfilet</li>
+                                    <li>stokbroodje gerookte palingfilet</li>
+                                    <li>stokbroodje gerookte kipfilet</li>
+                                    <li>stokbroodje ardennerham met pesto</li>
+                                    <li>stokbroodje filet américain</li>
+                                    <li>stokbroodje makreelfilet américain</li>
+                                    <li>komkommer met tonijnsalade</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-5">
+                                <img src="' ~ asset('img/hapjes-3.jpg') ~ '" class="mx-auto d-block">
+                            </div>
+                        </div>
+                    ' %}
+                    {{ assortiment('luxeHap', 'Luxe borrelhapjes', luxeHap) }}
+
+                    {% set eenvHap = '
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <h4>Minimaal 20 stuks per soort /&nbsp;€ 0,75 per stuk:</h4>
+                                <ul>
+                                    <li>Assortiment kaashapjes met garnituur</li>
+                                    <li>Assortiment worsthapjes</li>
+                                </ul>
+                                <h4>Minimaal 20 stuks per soort /&nbsp;€ 1,00 per stuk:</h4>
+                                <ul>
+                                    <li>Wrapstukjes met Hollandse garnalen</li>
+                                    <li>Wrapstukjes met gerookte zalmfilet</li>
+                                    <li>Wrapstukjes met rivierkreeftvlees</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-5">
+                                <img src="' ~ asset('img/hapjes.jpg') ~ '" class="mx-auto d-block">
+                            </div>
+                        </div>
+                    ' %}
+                    {{ assortiment('eenvHap', 'Eenvoudige hapjes', eenvHap) }}
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="bg-primary text-white rounded mb-{% if feestdagen %}0{% else %}5{% endif %}" id="contact">
+            <div class="container">
+                <h2 class="text-center text-uppercase text-white mb-0">Contact</h2>
+                <hr class="star-light mb-5">
+                <div class="mx-auto text-center text-white">
+                    <p>
+                        <strong>Vishandel Sjaak Tramper</strong><br>
+                        Smokkelhoekweg 11<br>
+                        4421 JH Kapelle<br>
+                    </p>
+                </div>
+                <br>
+                <br>
+                <div class="row contact-container mx-auto">
+                    <div class="col-sm-4 text-center text-white">
+                        <a href="mailto:info@sjaaktramper.nl" class="text-white">
+                            <p class="btn btn-outline-light btn-social text-center rounded-circle">
+                                <i class="fas fa-envelope"></i>
+                            </p>
+                            <p>info@sjaaktramper.nl</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 text-center text-white">
+                        <a href="tel:0113341016" class="text-white">
+                            <p class="btn btn-outline-light btn-social text-center rounded-circle">
+                                <i class="fas fa-phone"></i>
+                            </p>
+                            <p>(0113) 341016</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 text-center text-white">
+                        <a href="tel:0654297792" class="text-white">
+                            <p class="btn btn-outline-light btn-social text-center rounded-circle">
+                                <i class="fas fa-mobile"></i>
+                            </p>
+                            <p>0654297792</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% if feestdagen %}
+            <!-- Feestdagen Section -->
+            <section class="text-secondary mb-0" id="feestdagen">
+                <div class="container">
+                    <h2 class="text-center text-uppercase text-secondary">Bestellingen Feestdagen</h2>
+                    <hr class="star-dark">
+
+                    {% for message in app.flashes('order') %}
+                        <div class="alert alert-success text-center" role="alert">
+                            <h4 class="alert-heading">Bestelling geplaatst!</h4>
+                            <p>{{ message }}</p>
+                        </div>
+                    {% endfor %}
+
+                    <div class="info-container text-center">
+                        <div class="row">
+                            <div class="col-lg-5 ml-auto mt-5">
+                                <p>
+                                    <strong>Tijdens de feestdagen staan wij voor u klaar op;</strong>
+                                </p>
+                                <p>
+                                    <strong>Zaterdag 22 december</strong><br>
+                                    Op Standplaats Heinkenszand van 8.00 tot 12.30 uur<br>
+                                    Bij de Agrimarkt Goes van 8.00 tot 17.00 uur
+                                </p>
+                                <p>
+                                    <strong>Zaterdag 29 december<br>
+                                    </strong>Op Standplaats Heinkenszand van 8.00 tot 12.30 uur<br>
+                                    Bij de Agrimarkt Goes van 8.00 tot 17.00 uur
+                                </p>
+                            </div>
+                            <div class="col-lg-5 mr-auto mt-5">
+                                <p>
+                                    <strong>Mogelijkheden tot afhalen van de schotels in de werkplaats</strong><br>
+                                    <br>
+                                    Maandag 24 december van 16.00 tot 17.00 uur<br>
+                                    Dinsdag 25 december 12.00 tot 13.00 uur<br>
+                                    Woensdag 26 december van 12.00 tot 13.00uur<br>
+                                    Maandag 31 december van 13.00 tot 14.uur
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="mt-5">
+                            <strong>Geef uw bestelling uiterlijk dinsdag 18 december door.</strong>
+                        </p>
+                        <p><strong>LETOP!!!</strong><br>
+                            <strong>U kunt dus dit jaar alleen vis-en vleesschotels en gourmetschotels en soep bestellen en ophalen.</strong><br>
+                            <strong>De overige vis en visproducten kunt u gewoon aan de verkoopwagen kopen</strong>
+                        </p>
+                    </div>
+
+                    {% form_theme form 'fields.html.twig' %}
+                    {{ form_start(form) }}
+                    <div class="row">
+                        <div class="card mt-5 col-md-5">
+                            <img class="card-img-top" src="{{ asset('img/vissoep.jpeg') }}">
+                            <div class="card-body">
+                                <h5 class="card-title">Vissoep</h5>
+                                <div class="card-text">
+                                    <p>Huisgemaakt en goed gevuld met kabeljauw, mosselen en rivierkreeftvlees</p>
+                                    <div class="form-group form-inline">
+                                        <p>0,5 liter <span class="badge badge-success mr-2">€4.95</span>
+                                            {{ form_widget(form.fishSoup_05) }}
+                                            {{ form_errors(form.fishSoup_05) }}
+                                        </p>
+                                    </div>
+
+                                    <div class="form-group form-inline">
+                                        <p>1,0 liter <span class="badge badge-success mr-2">€7.95</span>
+                                            {{ form_widget(form.fishSoup_1) }}
+                                            {{ form_errors(form.fishSoup_1) }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="card mt-5 col-md-5">
+                            <img class="card-img-top" src="{{ asset('img/kreeftensoep.jpg') }}">
+                            <div class="card-body">
+                                <h5 class="card-title">Kreeftensoep</h5>
+                                <div class="card-text">
+                                    <div class="form-group form-inline">
+                                        <p>
+                                            0,5 liter <span class="badge badge-success mr-2">€15.95</span>
+                                            {{ form_widget(form.lobsterSoup) }}
+                                            {{ form_errors(form.lobsterSoup) }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="card mt-5 col-md-5">
+                            <img class="card-img-top" src="{{ asset('img/visschotel.jpg') }}">
+                            <div class="card-body">
+                                <h5 class="card-title">Visschotel de luxe</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li>Zalmsalade uit eigen keuken</li>
+                                        <li>Hollandse garnalen</li>
+                                        <li>Gerookte palingfilet</li>
+                                        <li>Gerookte zalmfilet</li>
+                                        <li>Gerookte forelfilet</li>
+                                        <li>Gerookte makreelfilet </li>
+                                        <li>Remoulade- en cocktailsaus</li>
+                                    </ul>
+                                    <br>
+                                    <div class="form-group form-inline">
+                                        <p>
+                                            per persoon <span class="badge badge-success mr-2">€14.95</span>
+                                            {{ form_widget(form.fishDish) }}
+                                            {{ form_errors(form.fishDish) }}
+                                        </p>
+                                    </div>
+                                    <div class="form-group form-inline">
+                                        <p>
+                                            vanaf 4 personen <span class="badge badge-success mr-2">€14.50</span>
+                                            {{ form_widget(form.fishDish_4) }}
+                                            {{ form_errors(form.fishDish_4) }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="card mt-5 col-md-5">
+                            <img class="card-img-top" src="{{ asset('img/vleesschotel.jpg') }}">
+                            <div class="card-body">
+                                <h5 class="card-title">Vleesschotel de luxe</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li>Vleessalade uit eigen keuken</li>
+                                        <li>Ardennerham met meloen</li>
+                                        <li>Boerenham</li>
+                                        <li>Fricandeau</li>
+                                        <li>Cervelaatrolletjes met roomkaas</li>
+                                        <li>Gehaktballetjes</li>
+                                        <li>Gevulde eieren</li>
+                                        <li>Remouladesaus en cocktailsaus</li>
+                                    </ul>
+                                    <div class="form-group form-inline">
+                                        <p>
+                                            per persoon <span class="badge badge-success mr-2">€14.95</span>
+                                            {{ form_widget(form.meatDish) }}
+                                            {{ form_errors(form.meatDish) }}
+                                        </p>
+                                    </div>
+                                    <div class="form-group form-inline">
+                                        <p>
+                                            vanaf 4 personen <span class="badge badge-success mr-2">€14.50</span>
+                                            {{ form_widget(form.meatDish_4) }}
+                                            {{ form_errors(form.meatDish_4) }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="card mt-5 col-md-6">
+                            <img class="card-img-top" src="{{ asset('img/gourmet.jpg') }}">
+                            <div class="card-body">
+                                <h5 class="card-title">Gourmetschotel</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li>Zalmfilet</li>
+                                        <li>Visvink</li>
+                                        <li>Tonijnfilet</li>
+                                        <li>Thilapiafilet</li>
+                                        <li>Pangasiusfilet</li>
+                                        <li>Scampis</li>
+                                        <li>Tongfilet</li>
+                                        <li>Ravigotte- en whiskysaus</li>
+                                    </ul>
+                                    <div class="form-group form-inline">
+                                        <p>
+                                            per persoon <span class="badge badge-success mr-2">€9.95</span>
+                                            {{ form_widget(form.gourmet) }}
+                                            {{ form_errors(form.gourmet) }}
+                                        </p>
+                                    </div>
+                                    <div class="form-group form-inline">
+                                        <p>
+                                            vanaf 4 personen <span class="badge badge-success mr-2">€9.50</span>
+                                            {{ form_widget(form.gourmet_4) }}
+                                            {{ form_errors(form.gourmet_4) }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="mt-5"></div>
+
+                    <div class="form-group">
+                        {{ form_row(form.name) }}
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            {{ form_row(form.email) }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            {{ form_row(form.phone) }}
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            {{ form_row(form.postal) }}
+                        </div>
+                        <div class="form-group col-md-9">
+                            {{ form_row(form.city) }}
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-10">
+                            {{ form_row(form.street) }}
+                        </div>
+                        <div class="form-group col-md-2">
+                            {{ form_row(form.number) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_row(form.pickup) }}
+                    </div>
+
+                    <p class="mb-5 mt-5">
+                        <strong>U dient contant te betalen bij het afhalen van uw bestelling</strong>
+                    </p>
+
+                    <button type="submit" class="btn btn-primary">Plaats uw bestelling</button>
+                    {{ form_end(form) }}
+                </div>
+            </section>
+        {% endif %}
+    {% endblock %}
+</div>
+
+{% block footer %}
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Social Media</h4>
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/vishandelsjaaktramper/">
+                                <i class="fab fa-fw fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/vishandelsjaaktramper">
+                                <i class="fab fa-fw fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" target="_blank" rel="noopener noreferrer" href="https://twitter.com/sjaaktramper">
+                                <i class="fab fa-fw fa-twitter"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="text-uppercase mb-4">Vishandel Sjaak Tramper</h4>
+                    <p class="lead mb-0">Dan weet je dat het goed is.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright py-4 text-center text-white bg-primary">
+        <div class="container">
+            <small>Copyright &copy; Vishandel Sjaak Tramper 2019</small>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('js/app') }}
+{% endblock %}
+
+</body>
+</html>
+
+{% macro assortiment(number, title, body) %}
+    <div class="card">
+        <div class="card-header" id="heading{{ number }}">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse{{ number }}" aria-expanded="true" aria-controls="collapse{{ number }}">
+                    {{ title }}
+                </button>
+            </h5>
+        </div>
+
+        <div id="collapse{{ number }}" class="collapse" aria-labelledby="heading{{ number }}" data-parent="#accordion">
+            <div class="card-body">
+                {{ body|raw }}
+            </div>
+        </div>
+    </div>
+{% endmacro %}

@@ -1,0 +1,16 @@
+// Styling for the order section
+.card-text {
+  .form-control {
+    max-width: 90px;
+  }
+}
+
+.form-group {
+  .form-error {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: red;
+    font-weight: 600;
+  }
+}
