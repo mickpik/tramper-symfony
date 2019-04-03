@@ -7,7 +7,7 @@ class ProductEnum
     public static function getPrices(): array
     {
         return [
-            'fishSoup_1' => 7.95,
+            'fishSoup_1' => 8.95,
             'fishSoup_05' => 4.95,
             'lobsterSoup' => 15.95,
             'fishDish' => 14.95,
@@ -22,8 +22,8 @@ class ProductEnum
     public static function getNames(): array
     {
         return [
-            'fishSoup_1' => 'Vissoep, 0,5 liter',
-            'fishSoup_05' => 'Vissoep, 1,0 liter',
+            'fishSoup_1' => 'Vissoep, 1,0 liter',
+            'fishSoup_05' => 'Vissoep, 0,5 liter',
             'lobsterSoup' => 'Kreeftensoe, 0,5 liter',
             'fishDish' => 'Visschotel de luxe, per persoon',
             'fishDish_4' => 'Visschotel de luxe, per persoon',
