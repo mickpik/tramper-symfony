@@ -22,9 +22,9 @@ class ProductEnum
     public static function getNames(): array
     {
         return [
-            'fishSoup_1' => 'Vissoep',
-            'fishSoup_05' => 'Vissoep',
-            'lobsterSoup' => 'Kreeftensoep',
+            'fishSoup_1' => 'Vissoep, 0,5 liter',
+            'fishSoup_05' => 'Vissoep, 1,0 liter',
+            'lobsterSoup' => 'Kreeftensoe, 0,5 liter',
             'fishDish' => 'Visschotel de luxe, per persoon',
             'fishDish_4' => 'Visschotel de luxe, per persoon',
             'meatDish' => 'Vleesschotel de luxe, per persoon',
