@@ -57,7 +57,7 @@ class DefaultController extends AbstractController
                 $mailTos = [$form->get('email')->getData(), 'info@sjaaktramper.nl'];
                 foreach ($mailTos as $mailTo) {
                     $message = (new \Swift_Message('Bestelling Successvol'))
-                        ->setFrom('info@sjaaktramper.nl')
+                        ->setFrom(['info@sjaaktramper.nl' => 'Vishandel Sjaak Tramper'])
                         ->setTo($mailTo)
                         ->setBody(
                             $this->renderView(
