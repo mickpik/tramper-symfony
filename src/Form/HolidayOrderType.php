@@ -21,63 +21,72 @@ class HolidayOrderType extends AbstractType
                 'required' => false,
                 'attr' => [
                     'placeholder' => 'Aantal',
-                    'min' => 0
+                    'min' => 0,
+                    'class' => 'd-inline-block'
                 ]
             ])
             ->add('fishSoup_05', IntegerType::class, [
                 'required' => false,
                 'attr' => [
                     'placeholder' => 'Aantal',
-                    'min' => 0
+                    'min' => 0,
+                    'class' => 'd-inline-block'
                 ]
             ])
             ->add('lobsterSoup', IntegerType::class, [
                 'required' => false,
                 'attr' => [
                     'placeholder' => 'Aantal',
-                    'min' => 0
+                    'min' => 0,
+                    'class' => 'd-inline-block'
                 ]
             ])
             ->add('fishDish', IntegerType::class, [
                 'required' => false,
                 'attr' => [
                     'placeholder' => 'Aantal',
-                    'min' => 0
+                    'min' => 0,
+                    'class' => 'd-inline-block'
                 ]
             ])
             ->add('fishDish_4', IntegerType::class, [
                 'required' => false,
                 'attr' => [
                     'placeholder' => 'Aantal',
-                    'min' => 4
+                    'min' => 4,
+                    'class' => 'd-inline-block'
                 ]
             ])
             ->add('meatDish', IntegerType::class, [
                 'required' => false,
                 'attr' => [
                     'placeholder' => 'Aantal',
-                    'min' => 0
+                    'min' => 0,
+                    'class' => 'd-inline-block'
                 ]
             ])
             ->add('meatDish_4', IntegerType::class, [
                 'required' => false,
                 'attr' => [
                     'placeholder' => 'Aantal',
-                    'min' => 4
+                    'min' => 4,
+                    'class' => 'd-inline-block'
                 ]
             ])
             ->add('gourmet', IntegerType::class, [
                 'required' => false,
                 'attr' => [
                     'placeholder' => 'Aantal',
-                    'min' => 0
+                    'min' => 0,
+                    'class' => 'd-inline-block'
                 ]
             ])
             ->add('gourmet_4', IntegerType::class, [
                 'required' => false,
                 'attr' => [
                     'placeholder' => 'Aantal',
-                    'min' => 4
+                    'min' => 4,
+                    'class' => 'd-inline-block'
                 ]
             ])
             ->add('name', TextType::class, [
