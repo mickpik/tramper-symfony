@@ -1,4 +1,4 @@
-{% set feestdagen = false %}
+{% set feestdagen = true %}
 
 <!DOCTYPE html>
 <html lang="{{ app.request.locale }}">
@@ -41,7 +41,7 @@
                     </li>
                     {% if feestdagen %}
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#feestdagen">Feestdagen</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#feestdagen">Bestellen</a>
                         </li>
                     {% endif %}
                 </ul>
@@ -219,7 +219,7 @@
                     <p class="lead">
                         KORTOM, Tramper Catering is echt van alle markten thuis. Onze catering is maatwerk. Graag bespreken wij geheel vrijblijvend met u uw persoonlijke wensen om te komen tot een passend cateringvoorstel.
                     </p>
-                    <img src="{{ asset('img/partypan.jpg') }}" height="500px" class="mx-auto d-block">
+                    <img src="{{ asset('img/partypan.jpg') }}" height="500px" class="partypan mx-auto d-block ">
                 </div>
 
                 <h3 class="text-center text-uppercase text-secondary mt-5 mb-5">Ons Assortiment</h3>
@@ -588,7 +588,7 @@
             <!-- Feestdagen Section -->
             <section class="text-secondary mb-0" id="feestdagen">
                 <div class="container">
-                    <h2 class="text-center text-uppercase text-secondary">Bestellingen Feestdagen</h2>
+                    <h2 class="text-center text-uppercase text-secondary">Bestellingen Pasen</h2>
                     <hr class="star-dark">
 
                     {% for message in app.flashes('order') %}
@@ -600,6 +600,7 @@
 
                     <div class="info-container text-center">
                         <div class="row">
+                            <!--
                             <div class="col-lg-5 ml-auto mt-5">
                                 <p>
                                     <strong>Tijdens de feestdagen staan wij voor u klaar op;</strong>
@@ -625,10 +626,11 @@
                                     Maandag 31 december van 13.00 tot 14.uur
                                 </p>
                             </div>
+                            -->
                         </div>
 
                         <p class="mt-5">
-                            <strong>Geef uw bestelling uiterlijk dinsdag 18 december door.</strong>
+                            <strong>Geef uw bestelling uiterlijk dinsdag 18 april door.</strong>
                         </p>
                         <p><strong>LETOP!!!</strong><br>
                             <strong>U kunt dus dit jaar alleen vis-en vleesschotels en gourmetschotels en soep bestellen en ophalen.</strong><br>

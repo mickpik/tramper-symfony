@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Enum\ProductEnum;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -127,16 +128,7 @@ class HolidayOrderType extends AbstractType
                 'constraints' => [
                     new NotBlank(),
                 ],
-                'choices' => [
-                    'Za 22 december - Agrimarkt Goes (8.00 - 17.00)' => 'za_agri',
-                    'Za 22 december - Standplaats Heinkenszand (8.00 - 12.30)' => 'za_hkz',
-                    'Ma 24 december - Werkplaats Kapelle (16.00 - 17.00)' => 'ma_kpl',
-                    'Di 25 december - Werkplaats Kapelle (12.00 - 13.00)' => 'di_kpl',
-                    'Wo 26 december - Werkplaats Kapelle (12.00 - 13.00)' => 'wo_kpl',
-                    'Za 29 december - Agrimarkt Goes (8.00 - 17.00)' => 'za_agri',
-                    'Za 29 december - Standplaats Heinkenszand (8.00 - 12.30)' => 'za_hkz',
-                    'Ma 31 december - Werkplaats Kapelle (13.00 - 14.00)' => 'ma_31_kpl'
-                ],
+                'choices' => ProductEnum::getPickupMoments(),
             ])
             ;
     }

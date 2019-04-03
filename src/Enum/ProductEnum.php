@@ -19,12 +19,39 @@ class ProductEnum
         ];
     }
 
+    public static function getNames(): array
+    {
+        return [
+            'fishSoup_1' => 'Vissoep',
+            'fishSoup_05' => 'Vissoep',
+            'lobsterSoup' => 'Kreeftensoep',
+            'fishDish' => 'Visschotel de luxe, per persoon',
+            'fishDish_4' => 'Visschotel de luxe, per persoon',
+            'meatDish' => 'Vleesschotel de luxe, per persoon',
+            'meatDish_4' => 'Vleesschotel de luxe, per persoon',
+            'gourmet' => 'Gourmetschotel, per persoon',
+            'gourmet_4' => 'Gourmetschotel, per persoon',
+        ];
+    }
+
     public static function getMinFourFields(): array
     {
         return [
             'fishDish_4',
             'meatDish_4',
             'gourmet_4'
+        ];
+    }
+
+    public static function getPickupMoments(): array
+    {
+        return [
+            'Za 20 april - Agrimarkt Goes (8.00 - 17.00)' => 'za_agri',
+            'Za 20 april - Standplaats Heinkenszand (8.00 - 12.00)' => 'za_hkz',
+            'Za 20 april - Wemeldinge haven (14.00 - 17.00)' => 'za_wml',
+            'Za 20 april - Smokkelhoekweg 11, Kapelle (16.00 - 17.00)' => 'za_smk',
+            'Zo 21 april - Smokkelhoekweg 11, Kapelle (12.00 - 13.00)' => 'zo_smk',
+            'Ma 22 april - Smokkelhoekweg 11, Kapelle (12.00 - 13.00)' => 'ma_smk'
         ];
     }
 }

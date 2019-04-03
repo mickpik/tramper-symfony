@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Enum\ProductEnum;
 use App\Form\HolidayOrderType;
+use App\Model\OrderRow;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\Request;
@@ -38,12 +39,20 @@ class DefaultController extends AbstractController
 
             if ($form->isValid()) {
                 $total = 0;
+                $orderRows = [];
                 foreach (ProductEnum::getPrices() as $field => $price) {
                     $data = $form->get($field)->getData();
                     if ($data !== null) {
                         $total += ($data * $price);
+                        $orderRow = new OrderRow();
+                        $orderRow->amount = $data;
+                        $orderRow->price = $price;
+                        $orderRow->name = ProductEnum::getNames()[$field];
+                        $orderRows[] = $orderRow;
                     }
                 }
+
+                $pickupMoment = array_flip(ProductEnum::getPickupMoments())[$form->get('pickup')->getData()];
 
                 $mailTos = [$form->get('email')->getData(), 'info@sjaaktramper.nl'];
                 foreach ($mailTos as $mailTo) {
@@ -54,7 +63,16 @@ class DefaultController extends AbstractController
                             $this->renderView(
                                 'emails/order.html.twig',
                                [
-                                   'total' => $total
+                                   'total' => $total,
+                                   'orderRows' => $orderRows,
+                                   'pickupMoment' => $pickupMoment,
+                                   'name' => $form->get('name')->getData(),
+                                   'email' => $form->get('email')->getData(),
+                                   'phone' => $form->get('phone')->getData(),
+                                   'postal' => $form->get('postal')->getData(),
+                                   'city' => $form->get('city')->getData(),
+                                   'street' => $form->get('street')->getData(),
+                                   'number' => $form->get('number')->getData()
                                ]
                             ),
                             'text/html'

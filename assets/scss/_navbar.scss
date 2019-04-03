@@ -28,6 +28,8 @@
   .navbar-toggler {
     font-size: 80%;
     padding: 0.8rem;
+    position: absolute;
+    right: 30px;
   }
 }
 @media(min-width:992px) {
