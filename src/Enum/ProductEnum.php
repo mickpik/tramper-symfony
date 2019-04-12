@@ -24,7 +24,7 @@ class ProductEnum
         return [
             'fishSoup_1' => 'Vissoep, 1,0 liter',
             'fishSoup_05' => 'Vissoep, 0,5 liter',
-            'lobsterSoup' => 'Kreeftensoe, 0,5 liter',
+            'lobsterSoup' => 'Kreeftensoep, 1,0 liter',
             'fishDish' => 'Visschotel de luxe, per persoon',
             'fishDish_4' => 'Visschotel de luxe, per persoon',
             'meatDish' => 'Vleesschotel de luxe, per persoon',
