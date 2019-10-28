@@ -46,12 +46,13 @@ class ProductEnum
     public static function getPickupMoments(): array
     {
         return [
-            'Za 20 april - Agrimarkt Goes (8.00 - 17.00)' => 'za_agri',
-            'Za 20 april - Standplaats Heinkenszand (8.00 - 12.00)' => 'za_hkz',
-            'Za 20 april - Wemeldinge haven (14.00 - 17.00)' => 'za_wml',
-            'Za 20 april - Smokkelhoekweg 11, Kapelle (16.00 - 17.00)' => 'za_smk',
-            'Zo 21 april - Smokkelhoekweg 11, Kapelle (12.00 - 13.00)' => 'zo_smk',
-            'Ma 22 april - Smokkelhoekweg 11, Kapelle (12.00 - 13.00)' => 'ma_smk'
+            'Di 24 dec - Standplaats Krabbendijke (8.00 - 12.30)' => 'di_krabbendijke',
+            'Di 24 dec - Standplaats Kruiningen (8.00 - 17.30)' => 'di_kruiningen',
+            'Di 24 dec - Jumbo Foodmarket Goes (8.00 - 17.00)' => 'di_jumbo',
+            'Di 24 dec - Smokkelhoekweg 11, Kapelle (16.00 - 17.00)' => 'di_smokkelhoek',
+            'Wo 25 dec - Smokkelhoekweg 11, Kapelle (12.00 - 13.00)' => 'wo_smokkelhoek',
+            'Do 26 dec - Smokkelhoekweg 11, Kapelle (12.00 - 13.00)' => 'do_smokkelhoek',
+            'Di 31 dec - Smokkelhoekweg 11, Kapelle (13.00 - 14.00)' => 'smokkelhoek_oudjaar'
         ];
     }
 }

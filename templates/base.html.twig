@@ -1,4 +1,4 @@
-{% set feestdagen = false %}
+{% set feestdagen = true %}
 
 <!DOCTYPE html>
 <html lang="{{ app.request.locale }}">
@@ -90,7 +90,7 @@
                             <tr>
                                 <td><b>Dinsdag</b></td>
                                 <td><b>08.00 – 17.00 uur</b></td>
-                                <td><b>Goes, Agrimarkt</b></td>
+                                <td><b>Goes, parkeerterrein Dirk van den Broek</b></td>
                             </tr>
                             <tr>
                                 <td><b>&nbsp;</b></td>
@@ -137,7 +137,7 @@
                             <tr>
                                 <td><b>Donderdag</b></td>
                                 <td><b>08.00 – 17.00 uur</b></td>
-                                <td><b>Goes, Agrimarkt</b></td>
+                                <td><b>Goes, parkeerterrein Dirk van den Broek</b></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -157,7 +157,7 @@
                             <tr>
                                 <td><b>Vrijdag</b></td>
                                 <td><b>08.00 – 17.00 uur</b></td>
-                                <td><b>Goes, Agrimarkt</b></td>
+                                <td><b>Goes, parkeerterrein Jumbo Foodmarkt</b></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -182,7 +182,7 @@
                             <tr>
                                 <td><b>Zaterdag</b></td>
                                 <td><b>08.00 – 17.00 uur</b></td>
-                                <td><b>Goes, Agrimarkt</b></td>
+                                <td><b>Goes, parkeerterrein Jumbo Foodmarkt</b></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -588,7 +588,7 @@
             <!-- Feestdagen Section -->
             <section class="text-secondary mb-0" id="feestdagen">
                 <div class="container">
-                    <h2 class="text-center text-uppercase text-secondary">Bestellingen Pasen</h2>
+                    <h2 class="text-center text-uppercase text-secondary">Bestellingen Feestdagen</h2>
                     <hr class="star-dark">
 
                     {% for message in app.flashes('order') %}
@@ -630,7 +630,7 @@
                         </div>
 
                         <p class="mt-5">
-                            <strong>Geef uw bestelling uiterlijk dinsdag 18 april door.</strong>
+                            <strong>Geef uw bestelling uiterlijk donderdag 19 december door.</strong>
                         </p>
                         <p><strong>LETOP!!!</strong><br>
                             <strong>U kunt dus dit jaar alleen vis-en vleesschotels en gourmetschotels en soep bestellen en ophalen.</strong><br>
@@ -824,6 +824,8 @@
                     <div class="form-group">
                         {{ form_row(form.pickup) }}
                     </div>
+
+                    <p>Dinsdag 31 december niet op standplaatsen</p>
 
                     <p class="mb-5 mt-5">
                         <strong>U kunt contant of per pin betalen bij het afhalen van uw bestelling</strong>
