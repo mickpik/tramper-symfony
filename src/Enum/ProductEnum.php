@@ -46,9 +46,6 @@ class ProductEnum
     public static function getPickupMoments(): array
     {
         return [
-            'Di 24 dec - Standplaats Krabbendijke (8.00 - 12.30)' => 'di_krabbendijke',
-            'Di 24 dec - Standplaats Kruiningen (8.00 - 17.30)' => 'di_kruiningen',
-            'Di 24 dec - Jumbo Foodmarket Goes (8.00 - 17.00)' => 'di_jumbo',
             'Di 24 dec - Smokkelhoekweg 11, Kapelle (16.00 - 17.00)' => 'di_smokkelhoek',
             'Wo 25 dec - Smokkelhoekweg 11, Kapelle (12.00 - 13.00)' => 'wo_smokkelhoek',
             'Do 26 dec - Smokkelhoekweg 11, Kapelle (12.00 - 13.00)' => 'do_smokkelhoek',
