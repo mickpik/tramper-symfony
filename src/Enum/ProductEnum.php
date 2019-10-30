@@ -46,7 +46,7 @@ class ProductEnum
     public static function getPickupMoments(): array
     {
         return [
-            'Di 24 dec - Smokkelhoekweg 11, Kapelle (16.00 - 17.00)' => 'di_smokkelhoek',
+            'Di 24 dec - Smokkelhoekweg 11, Kapelle (13.00 - 15.00)' => 'di_smokkelhoek',
             'Wo 25 dec - Smokkelhoekweg 11, Kapelle (12.00 - 13.00)' => 'wo_smokkelhoek',
             'Do 26 dec - Smokkelhoekweg 11, Kapelle (12.00 - 13.00)' => 'do_smokkelhoek',
             'Di 31 dec - Smokkelhoekweg 11, Kapelle (13.00 - 14.00)' => 'smokkelhoek_oudjaar'
