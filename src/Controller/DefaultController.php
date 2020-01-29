@@ -52,7 +52,8 @@ class DefaultController extends AbstractController
                     }
                 }
 
-                $pickupMoment = array_flip(ProductEnum::getPickupMoments())[$form->get('pickup')->getData()];
+                // $pickupMoment = array_flip(ProductEnum::getPickupMoments())[$form->get('pickup')->getData()];
+                $pickupMoment = $form->get('pickup')->getData()->format('d-m-Y');
 
                 $mailTos = [$form->get('email')->getData(), 'info@sjaaktramper.nl'];
                 foreach ($mailTos as $mailTo) {
@@ -66,6 +67,7 @@ class DefaultController extends AbstractController
                                    'total' => $total,
                                    'orderRows' => $orderRows,
                                    'pickupMoment' => $pickupMoment,
+                                   'pickupLocation' => $form->get('pickupLocation')->getData(),
                                    'name' => $form->get('name')->getData(),
                                    'email' => $form->get('email')->getData(),
                                    'phone' => $form->get('phone')->getData(),

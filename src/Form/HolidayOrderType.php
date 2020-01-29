@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Enum\ProductEnum;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -12,10 +13,14 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
+
 class HolidayOrderType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $dayInFuture = new \DateTime();
+        $dayInFuture->modify('+1 day');
+
         $builder
             ->add('fishSoup_1', IntegerType::class, [
                 'required' => false,
@@ -132,12 +137,29 @@ class HolidayOrderType extends AbstractType
                     new NotBlank(),
                 ],
             ])
-            ->add('pickup', ChoiceType::class, [
+            // ->add('pickup', ChoiceType::class, [
+            //     'label' => 'Afhaallocatie',
+            //     'constraints' => [
+            //         new NotBlank(),
+            //     ],
+            //     'choices' => ProductEnum::getPickupMoments(),
+            // ])
+            ->add('pickup', DateType::class, [
+                'label' => 'Afhaalmoment',
+                'constraints' => [
+                    new NotBlank(),
+                ],
+                'widget' => 'single_text',
+                'data' => $dayInFuture,
+                'attr' => [
+                    'min' => $dayInFuture->format('Y-m-d')
+                ]
+            ])
+             ->add('pickupLocation', TextType::class, [
                 'label' => 'Afhaallocatie',
                 'constraints' => [
                     new NotBlank(),
                 ],
-                'choices' => ProductEnum::getPickupMoments(),
             ])
             ;
     }

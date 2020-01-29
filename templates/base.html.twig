@@ -588,7 +588,7 @@
             <!-- Feestdagen Section -->
             <section class="text-secondary mb-0" id="feestdagen">
                 <div class="container">
-                    <h2 class="text-center text-uppercase text-secondary">Bestellingen Feestdagen</h2>
+                    <h2 class="text-center text-uppercase text-secondary">Bestellingen</h2>
                     <hr class="star-dark">
 
                     {% for message in app.flashes('order') %}
@@ -628,10 +628,12 @@
                             </div>
                             -->
                         </div>
+                        <!--
                         <p><strong>LETOP!!!</strong><br>
                             <strong>U kunt dus dit jaar met de feestdagen alleen vis-en vleesschotels en gourmetschotels en soep bestellen en ophalen.</strong><br>
                             <strong>De overige vis en visproducten kunt u gewoon aan de verkoopwagen kopen</strong>
                         </p>
+                        -->
                     </div>
 
                     {% form_theme form 'fields.html.twig' %}
@@ -819,12 +821,22 @@
                             {{ form_row(form.number) }}
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        {{ form_row(form.pickup) }}
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            {{ form_row(form.pickup) }}
+                        </div>
+                        <div class="form-group col-md-9">
+                            {{ form_row(form.pickupLocation) }}
+                        </div>
                     </div>
 
+                    <div class="form-group">
+                        
+                    </div>
+
+                    <!--
                     <p>Dinsdag 24 en 31 december niet op standplaatsen</p>
+                    -->
 
                     <p class="mb-5 mt-5">
                         <strong>U kunt contant of per pin betalen bij het afhalen van uw bestelling</strong>
