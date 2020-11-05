@@ -7,7 +7,7 @@ class ProductEnum
     public static function getPrices(): array
     {
         return [
-            'fishSoup_1' => 8.95,
+            'fishSoup_1' => 9.95,
             'fishSoup_05' => 4.95,
             'lobsterSoup' => 15.95,
             'fishDish' => 14.95,
